@@ -1,0 +1,194 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: local('TT Lakes Medium'), local('TTLakes-Medium'),
+        url('./fonts/TTLakes-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TT Lakes';
+    src: local('TT Lakes Bold'), local('TTLakes-Bold'),
+        url('./fonts/TTLakes-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TT Lakes';
+    src: local('TT Lakes Regular'), local('TTLakes-Regular'), url('./fonts/TTLakes-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-width: 320px;
+    max-width: 1120px;
+    background: #F2F2F2;
+}
+section {
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    background: #FFFFFF;
+    border-top: 1px solid #D9FFF5;
+    padding: 16px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #7E7E82;
+    line-height: 24px;
+    font-family: "TT Lakes";
+}
+.container {
+    padding-left: 16px;
+}
+.main {
+    width: auto;
+    margin: 16px 0px 16px 0px;
+}
+.swiper-container {
+    width: 100%;
+    padding-bottom: 28px;
+}
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #DDDDDD;
+}
+.swiper-pagination-bullet-active {
+    background: #B5B6BC;
+}
+.container::after {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 81px;
+    right: 1px;
+    top: 10px;
+    z-index: 1;
+    filter: blur(8px);
+}
+.main__brend {
+    display: flex;
+    align-items: center;
+    width: 238px;
+    list-style: none;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    position: relative;
+    height: 72px;
+    padding-left: 16px;
+}
+.main__link {
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+}
+
+.link-brand {
+    height: 40px;
+    width: 40px;
+    right: 16px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background:#FFFFFF url("image/dropdown.svg") no-repeat center ;
+    border:2px solid #FF3E79; 
+    cursor: pointer;
+}
+.container__button-show-more {
+    position: relative;
+    font-family: "TT Lakes";
+    font-size: 16px;
+    background: #F2F2F2;
+    border: none;
+    font-weight: 500;
+    padding-left: 24px;
+    display: none;
+}
+.container__button-show-more::before {
+    position: absolute;
+    content: url("image/icons.svg");
+    margin-left: -17px;
+    cursor: pointer;
+}
+@media (min-width: 768px) {
+    .header {
+        padding-left: 24px;
+    }
+    .container {
+        padding-left: 24px;
+        padding-bottom: 34px;
+    }
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+        height: 159px;
+        overflow: hidden;
+        margin: 24px 0px 24px 0px;
+    }
+    .swiper-pagination-bullet{
+        display: none;
+    }
+    .main__brend {
+        width: 222px;
+        margin-bottom: 16px;
+        margin-right: 24px;
+    }
+    .main__brend:nth-child(3n+3) {
+        margin-right: 0px;
+    }
+    .container__button-show-more {
+        display: block;
+    }
+
+    .container__button-show-more:hover {
+        cursor: pointer;
+    }
+    .main-show-more_active {
+        height: auto;
+    }
+    .container__button-show-more_active::before {
+        transform: rotate(180deg);
+    }
+}
+@media (min-width: 984px) {
+    .main__brend:nth-child(3n+3) {
+        margin-right: 24px;    
+    }
+    .swiper-pagination-bullet{
+        display: none;
+    }
+}
+@media (min-width: 1120px) {
+    .container {
+        padding-left: 32px;
+    }
+    .main {
+        margin: 24px 33px 34px 0px;
+    }
+    .main__brend {
+        min-width: 238px;
+        margin-right: 32px;
+    }
+    .main__brend:nth-child(3n+3) {
+        margin-right: 32px;
+    }
+    .main__brend:nth-child(4n+4) {
+        margin-right: 0px;
+    }
+    .main__brend:nth-child(9),
+    .main__brend:nth-child(10),
+    .main__brend:nth-child(11) {
+        margin-bottom: 0px;
+    }
+    .swiper-pagination-bullet{
+        display: none;
+    }
+}
