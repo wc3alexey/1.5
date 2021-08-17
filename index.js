@@ -1,9 +1,9 @@
 let main = document.querySelector(".main");
-let button = document.querySelector('.container__button-show-more');
+let button = document.querySelector('.container__button-showMore');
 button.addEventListener('click', function () {
-    main.classList.toggle("main-show-more_active");
-    button.classList.toggle("container__button-show-more_active");
-    if (button.classList.contains("container__button-show-more_active")) {
+    main.classList.toggle("main-showMore_active");
+    button.classList.toggle("container__button-showMore_active");
+    if (button.classList.contains("container__button-showMore_active")) {
         button.textContent = "Скрыть"
     } else button.textContent = "Показать все"
 });
