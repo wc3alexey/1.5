@@ -22,22 +22,17 @@ function mobileSlider() {
                 clickable: true,
             },
         });
-
         slider.dataset.mobile = "true";
     }
-
     if (window.innerWidth > 767) {
         slider.dataset.mobile = "false";
 
         if (slider.classList.contains("swiper-container-initialized")) {
             swiper.destroy();
         }
-
     }
 }
-
 mobileSlider();
-
 window.addEventListener('resize', () => {
     mobileSlider();
 });
