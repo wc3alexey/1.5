@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'TT Lakes';
+    font-family: 'TLakes-Medium';
     src: local('TT Lakes Medium'), local('TTLakes-Medium'),
         url('./fonts/TTLakes-Medium.woff') format('woff');
     font-weight: 500;
@@ -24,8 +24,6 @@
     box-sizing: border-box;
 }
 body {
-    min-width: 320px;
-    max-width: 1120px;
     background: #F2F2F2;
 }
 section {
@@ -33,9 +31,9 @@ section {
     display: flex;
     flex-direction: column;
 }
-.header {
-    background:linear-gradient( #F8F8F8 100% ,#FFFFFF 100%);
-    border-top: 1px solid #D9FFF5;
+.header{
+    background: linear-gradient(90deg,  #F8F8F8 0%, #FFFFFF 98.61%);
+    border-top: 3px solid #D9FFF5;
     padding: 16px;
     text-transform: uppercase;
     font-size: 16px;
@@ -46,6 +44,7 @@ section {
 .container {
     padding-left: 16px;
 }
+
 .main {
     width: auto;
     margin: 16px 0px 16px 0px;
@@ -101,16 +100,33 @@ section {
     background:#FFFFFF url("image/dropdown.svg") no-repeat center ;
     border:2px solid #FF3E79; 
     cursor: pointer;
+    overflow: hidden;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+}
+.link-brand:hover{
+    border-radius: 50%;
+    -webkit-transform: rotate(360deg);
+   transform: rotate(360deg);
+   background: rgb(212, 32, 0);
 }
 .container__button-showMore {
     position: relative;
-    font-family: "TT Lakes";
+    font-family: "TLakes-Medium";
     font-size: 16px;
+    color: #1B1C21;
     background: #F2F2F2;
     border: none;
     font-weight: 500;
     padding-left: 24px;
+    padding-right: 10px;
     display: none;
+}
+.container__button-showMore:hover {
+    -webkit-transform: translate(10px);
+    transform: translate(10px);
+    box-shadow: 0 15px 10px 0 rgba(0,0,0,0.2);
 }
 .container__button-showMore::before {
     position: absolute;
@@ -119,7 +135,7 @@ section {
     cursor: pointer;
 }
 @media (min-width: 768px) {
-    .header {
+    .header{
         padding-left: 24px;
     }
     .container {
@@ -154,11 +170,12 @@ section {
     .main-showMore_active {
         height: auto;
     }
-    .container__button-showMore_active::before {
-        transform: rotate(180deg);
-    }
+
 }
 @media (min-width: 984px) {
+    .header{
+        padding-left: 32px;
+    }
     .main__brend:nth-child(3n+3) {
         margin-right: 24px;    
     }
@@ -170,6 +187,9 @@ section {
     .container {
         padding-left: 32px;
     }
+   .header{
+       padding-left: 32px;
+   }
     .main {
         margin: 24px 33px 34px 0px;
     }
@@ -191,4 +211,10 @@ section {
     .swiper-pagination-bullet{
         display: none;
     }
+}
+@media (min-width: 1383px){
+    .main__brend:nth-child(4n+4) {
+        margin-right: 32px;
+
+}
 }
