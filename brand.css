@@ -158,6 +158,10 @@ section {
     .container__button-showMore {
         display: block;
     }
+    .container::after{
+        display: none;
+    }
+
 
     .container__button-showMore:hover {
         cursor: pointer;
