@@ -41,10 +41,6 @@ section {
     line-height: 24px;
     font-family: "TT Lakes";
 }
-.header:hover{
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-
-}
 .container {
     padding-left: 16px;
 }
