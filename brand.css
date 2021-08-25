@@ -27,6 +27,7 @@ body {
     background: #F8F8F8;
 }
 section {
+    position: relative;
     min-width: 320px;
     display: flex;
     flex-direction: column;
