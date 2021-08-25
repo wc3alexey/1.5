@@ -182,6 +182,9 @@ section {
     }
 }
 @media (min-width: 1120px) {
+    .header {
+        padding-left: 32px;
+    }
     .container {
         padding-left: 32px;
     }
